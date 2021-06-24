@@ -1,0 +1,49 @@
+{
+  "easycom": {
+    "^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+  },
+  "pages": [{
+      "path": "pages/home/asset",
+      "style": {
+        "navigationBarTitleText": "资产管理",
+        "app-plus": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/home/stationery",
+      "style": {
+        "navigationBarTitleText": "文具柜",
+        "app-plus": {
+          "titleNView": false
+        }
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "万达",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "black",
+    "selectedColor": "#2979FF",
+    "borderStyle": "black",
+    "backgroundColor": "#f3f4f6",
+    "list": [{
+        "iconPath": "static/icon/stationery.png",
+        "selectedIconPath": "static/icon/stationery.png",
+        "pagePath": "pages/home/stationery",
+        "text": "文具柜"
+      },
+      {
+        "iconPath": "static/icon/asset.png",
+        "selectedIconPath": "static/icon/asset.png",
+        "pagePath": "pages/home/asset",
+        "text": "资产管理"
+      }
+    ]
+  }
+}
