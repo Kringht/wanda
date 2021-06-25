@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "文具柜",
+  "usingComponents": {
+    "u-input": "/uview-ui/components/u-input/u-input",
+    "u-line": "/uview-ui/components/u-line/u-line",
+    "u-button": "/uview-ui/components/u-button/u-button"
+  }
+}

@@ -1,0 +1,25 @@
+
+.context {
+  background: #b5ffe9;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.foot {
+  position: absolute;
+  bottom: 4px;
+  text-align: center;
+}
+u-td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+u-icon {
+  margin: 0 4px;
+}
+

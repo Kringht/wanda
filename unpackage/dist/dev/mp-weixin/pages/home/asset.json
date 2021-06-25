@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "资产管理",
+  "usingComponents": {
+    "u-table": "/uview-ui/components/u-table/u-table",
+    "u-tr": "/uview-ui/components/u-tr/u-tr",
+    "u-th": "/uview-ui/components/u-th/u-th",
+    "u-td": "/uview-ui/components/u-td/u-td",
+    "u-icon": "/uview-ui/components/u-icon/u-icon",
+    "u-select": "/uview-ui/components/u-select/u-select",
+    "u-button": "/uview-ui/components/u-button/u-button"
+  }
+}
