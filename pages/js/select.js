@@ -1,149 +1,135 @@
-const select_list = [{
+const select_list = [
+  {
     value: '01',
     label: '低值易耗',
-    children: [{
-        value: '键鼠',
-        label: '键鼠',
-        children: [{
-          value: '键鼠',
-          label: 'ALL'
-        }, {
-          value: '鼠标',
-          label: '鼠标'
-        }, {
-          value: '键盘',
-          label: '键盘'
-        }]
-      },
-      {
-        value: '电话',
-        label: '电话'
-      },
-      {
-        value: '碎纸机',
-        label: '碎纸机'
-      },
-      {
-        value: '冰箱',
-        label: '冰箱'
-      },
-      {
-        value: '饮水机',
-        label: '饮水机'
-      },
-      {
-        value: '微波炉',
-        label: '微波炉'
-      },
-      {
-        value: '保险柜',
-        label: '保险柜'
-      },
-      {
-        value: '标签机',
-        label: '标签机'
-      },
-      {
-        value: '雨伞架',
-        label: '雨伞架'
-      },
-      {
-        value: '全向麦',
-        label: '全向麦'
-      },
-      {
-        value: '移动硬盘',
-        label: '移动硬盘'
-      },
-      {
-        value: '投影幕布',
-        label: '投影幕布'
-      },
-      {
-        value: '视频矩阵',
-        label: '视频矩阵'
-      },
-      {
-        value: '音响',
-        label: '音响'
-      },
-      {
-        value: '油炸锅',
-        label: '油炸锅'
-      },
-      {
-        value: '相机配件',
-        label: '相机配件'
-      },
-      {
-        value: '录音笔',
-        label: '录音笔'
-      },
-      {
-        value: '茶具',
-        label: '茶具'
-      },
-      {
-        value: '电视配件',
-        label: '电视配件'
-      },
-      {
-        value: '对讲机',
-        label: '对讲机'
-      },
-      {
-        value: '会议用品',
-        label: '会议用品'
-      },
-      {
-        value: '酒杯柜',
-        label: '酒杯柜'
-      },
-      {
-        value: '钥匙箱',
-        label: '钥匙箱'
-      },
-      {
-        value: '健身器材',
-        label: '健身器材'
-      },
-      {
-        value: '洗衣机',
-        label: '洗衣机'
-      },
-      {
-        value: '暖风机',
-        label: '暖风机'
-      },
-      {
-        value: '折叠躺椅',
-        label: '折叠躺椅'
-      },
-      {
-        value: '热水壶',
-        label: '热水壶'
-      },
-      {
-        value: '电热毛巾柜',
-        label: '电热毛巾柜',
-      },
-      {
-        value: '翻页笔',
-        label: '翻页笔'
-      }
+    children: [
+      {value: '电话',label: '电话'},
+      {value: '碎纸机',label: '碎纸机'},
+      {value: '冰箱',label: '冰箱'},
+      {value: '饮水机',label: '饮水机'},
+      {value: '微波炉',label: '微波炉'},
+      {value: '保险柜',label: '保险柜'},
+      {value: '标签机',label: '标签机'},
+      {value: '雨伞架',label: '雨伞架'},
+      {value: '全向麦',label: '全向麦'},
+      {value: '移动硬盘',label: '移动硬盘'},
+      {value: '投影幕布',label: '投影幕布'},
+      {value: '视频矩阵',label: '视频矩阵'},
+      {value: '音响',label: '音响'},
+      {value: '油炸锅',label: '油炸锅'},
+      {value: '相机配件',label: '相机配件'},
+      {value: '录音笔',label: '录音笔'},
+      {value: '键鼠',label: '键鼠'},
+      {value: '茶具',label: '茶具'},
+      {value: '电视配件',label: '电视配件'},
+      {value: '对讲机',label: '对讲机'},
+      {value: '会议用品',label: '会议用品'},
+      {value: '酒杯柜',label: '酒杯柜'},
+      {value: '钥匙箱',label: '钥匙箱'},
+      {value: '健身器材',label: '健身器材'},
+      {value: '洗衣机',label: '洗衣机'},
+      {value: '暖风机',label: '暖风机'},
+      {value: '折叠躺椅',label: '折叠躺椅'},
+      {value: '热水壶',label: '热水壶'},
+      {value: '鼠标',label: '鼠标'},
+      {value: '键盘',label: '键盘'},
+      {value: '电热毛巾柜',label: '电热毛巾柜'},
+      {value: '翻页笔',label: '翻页笔'}
     ]
   },
   {
     value: '02',
     label: '个人笔记本',
-    children: [{
-      value: 9,
-      label: '纽约',
-      children: [{
-        value: 10,
-        label: '皇后街区'
-      }]
-    }]
+    children: [
+      {value: '个人笔记本',label: '个人笔记本'},
+    ]
+  },
+  {
+    value: '03',
+    label: 'IT-固定资产',
+    children:[
+      {value: '笔记本电脑',label: '笔记本电脑'},
+      {value: '照相机',label: '照相机'},
+      {value: '照相机镜头',label: '照相机镜头'},
+      {value: '录音笔',label: '录音笔'},
+      {value: '咖啡机',label: '咖啡机'},
+      {value: '电视',label: '电视'},
+      {value: '装订机',label: '装订机'},
+      {value: '打印机',label: '打印机'},
+      {value: '台式电脑',label: '台式电脑'},
+      {value: '摄像头',label: '摄像头'},
+      {value: '投影仪',label: '投影仪'},
+      {value: '会议主机',label: '会议主机'},
+      {value: '视频矩阵',label: '视频矩阵'},
+      {value: '麦克风',label: '麦克风'},
+      {value: '调音台',label: '调音台'},
+      {value: '微型电脑',label: '微型电脑'},
+      {value: '路由器',label: '路由器'},
+      {value: '交换机',label: '交换机'},
+      {value: '投影架',label: '投影架'},
+      {value: '食堂设备',label: '食堂设备'},
+      {value: '电脑',label: '电脑'},
+      {value: '空气净化器',label: '空气净化器'},
+      {value: '鹅颈麦',label: '鹅颈麦'},
+      {value: '印章',label: '印章'}
+    ]
+  },
+  {
+    value: '04',
+    label: '家具-固定资产',
+    children:[
+      {value: '总裁班台',label: '总裁班台'},
+      {value: '总裁班椅',label: '总裁班椅'},
+      {value: '总裁客椅',label: '总裁客椅'},
+      {value: '茶几',label: '茶几'},
+      {value: '单人沙发',label: '单人沙发'},
+      {value: '矮文件柜',label: '矮文件柜'},
+      {value: '更衣柜',label: '更衣柜'},
+      {value: '鱼缸',label: '鱼缸'},
+      {value: '班台',label: '班台'},
+      {value: '班椅',label: '班椅'},
+      {value: '客椅',label: '客椅'},
+      {value: '文件柜',label: '文件柜'},
+      {value: '长茶几',label: '长茶几'},
+      {value: '小茶几',label: '小茶几'},
+      {value: '三人沙发',label: '三人沙发'},
+      {value: '高文件柜',label: '高文件柜'},
+      {value: '大会议桌',label: '大会议桌'},
+      {value: '会议椅',label: '会议椅'},
+      {value: '中会议桌',label: '中会议桌'},
+      {value: '小会议桌',label: '小会议桌'},
+      {value: '屏风工位',label: '屏风工位'},
+      {value: '推柜',label: '推柜'},
+      {value: '员工椅',label: '员工椅'},
+      {value: '前台椅',label: '前台椅'},
+      {value: '洽谈椅',label: '洽谈椅'},
+      {value: '设备矮柜',label: '设备矮柜'},
+      {value: '休闲桌',label: '休闲桌'},
+      {value: '洽谈桌',label: '洽谈桌'},
+      {value: '休闲椅',label: '休闲椅'},
+      {value: '双人沙发',label: '双人沙发'},
+      {value: '单人休闲椅',label: '单人休闲椅'},
+      {value: '圆角几',label: '圆角几'},
+      {value: '审图区桌',label: '审图区桌'},
+      {value: '材料封样桌',label: '材料封样桌'},
+      {value: '审图区椅子',label: '审图区椅子'},
+      {value: '材料区文件柜',label: '材料区文件柜'},
+      {value: '吧台桌',label: '吧台桌'},
+      {value: '吧椅',label: '吧椅'},
+      {value: '书架',label: '书架'},
+      {value: '活动椅',label: '活动椅'},
+      {value: '活动桌',label: '活动桌'},
+      {value: '档案文件柜',label: '档案文件柜'},
+      {value: '更衣凳',label: '更衣凳'},
+      {value: '四人餐桌',label: '四人餐桌'},
+      {value: '六人餐桌',label: '六人餐桌'},
+      {value: '公共餐椅',label: '公共餐椅'},
+      {value: '餐具架',label: '餐具架'},
+      {value: '包间餐桌',label: '包间餐桌'},
+      {value: '包间餐椅',label: '包间餐椅'},
+      {value: '包间衣柜',label: '包间衣柜'},
+      {value: '审图区矮柜',label: '审图区矮柜'}
+    ]
   }
 ]
 

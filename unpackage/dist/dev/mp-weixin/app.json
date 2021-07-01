@@ -1,17 +1,17 @@
 {
   "pages": [
-    "pages/home/asset",
-    "pages/home/stationery"
+    "pages/home/stationery",
+    "pages/home/asset"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "万达",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarBackgroundColor": "#f3f4f6",
+    "backgroundColor": "#f3f4f6"
   },
   "tabBar": {
-    "color": "black",
+    "color": "#303133",
     "selectedColor": "#2979FF",
     "borderStyle": "black",
     "backgroundColor": "#f3f4f6",

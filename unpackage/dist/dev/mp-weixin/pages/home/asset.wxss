@@ -1,23 +1,30 @@
 
-.context {
-  background: #b5ffe9;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-}
 .foot {
+  /* 查询条件选择部分,绝对定位在底部 */
   position: absolute;
   bottom: 4px;
-  text-align: center;
+  width: 100%;
 }
 u-td {
+  /* 文字居中 */
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;
+}
+.u-select {
+  width: 100%;
+  position: relative;
+  float: left;
+  text-align: center;
+}
+.uinput {
+  float: left;
+  width: 65%;
+}
+.ubutton {
+  float: right;
+  width: 30%;
+  margin-right: 5%;
 }
 u-icon {
   margin: 0 4px;
