@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/home/stationery",
-    "pages/home/asset"
+    "pages/components/editMessage",
+    "pages/home/asset",
+    "pages/home/stationery"
   ],
   "subPackages": [],
   "window": {

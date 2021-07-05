@@ -25,7 +25,7 @@
             <u-td>
               <view>
                 <u-icon class="search" name="search" size="38" @click="search_id(asset._id)" />
-                <u-icon v-show="false" class="edit" name="edit-pen" size="38" @click="edit(asset._id)" />
+                <u-icon class="edit" name="edit-pen" size="38" @click="edit(asset._id)" />
               </view>
             </u-td>
           </u-tr>
@@ -74,7 +74,7 @@
         </u-popup>
       </view>
     </view>
-  </view>
+
   </view>
 </template>
 
@@ -120,10 +120,16 @@
       },
       // 编辑
       edit(id) {
-        uni.showToast({
-          icon: 'none',
-          title: '编辑：' + id,
-          duration: 1500
+        uni.navigateTo({
+          url: '../components/editMessage?id=' + id,
+          animationType: 'slide-in-top',
+          animationDuration: 300,
+          success: res => {
+            console.log('页面跳转成功')
+          },
+          fail: err => {
+            console.log('页面跳转失败：', err)
+          }
         })
       },
       // ID查看
@@ -198,7 +204,7 @@
         uni.showToast({
           icon: 'none',
           title: '查询完成',
-          duration: 1000
+          duration: 500
         })
       },
       // 成功提示框
@@ -206,7 +212,7 @@
         uni.showToast({
           icon: 'none',
           title: '查询失败，请联系管理员！' + err,
-          duration: 1500
+          duration: 1000
         })
       }
 
@@ -217,6 +223,11 @@
 
 
 <style>
+  .context {
+    display: flex;
+    flex-direction: column;
+  }
+
   .foot {
     /* 查询条件选择部分,绝对定位在底部 */
     position: absolute;
