@@ -3,34 +3,51 @@
     "^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
   },
   "pages": [{
-    "path": "pages/components/editMessage",
-    "style": {
-      "navigationBarTitleText": "修改信息",
-      "app-plus": {
-        "animationType": "slide-in-top",
-        "animationDuration": 300,
-        "titleNView": false
+      "path": "pages/home/login",
+      "style": {
+        "navigationBarTitleText": "",
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    },
+    {
+      "path": "pages/home/stationery",
+      "style": {
+        "navigationBarTitleText": "文具柜",
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    },
+    {
+      "path": "pages/home/asset",
+      "style": {
+        "navigationBarTitleText": "资产管理",
+        "app-plus": {
+          "animationType": "slide-in-top",
+          "animationDuration": 300,
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    },
+
+    {
+      "path": "pages/components/editMessage",
+      "style": {
+        "navigationBarTitleText": "修改信息",
+        "app-plus": {
+          "animationType": "slide-in-top",
+          "animationDuration": 300,
+          "titleNView": false,
+          "bounce": "none"
+        }
       }
     }
-  }, {
-    "path": "pages/home/asset",
-    "style": {
-      "navigationBarTitleText": "资产管理",
-      "app-plus": {
-        "animationType": "slide-in-top",
-        "animationDuration": 300,
-        "titleNView": false
-      }
-    }
-  }, {
-    "path": "pages/home/stationery",
-    "style": {
-      "navigationBarTitleText": "文具柜",
-      "app-plus": {
-        "titleNView": false
-      }
-    }
-  }],
+  ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "万达",

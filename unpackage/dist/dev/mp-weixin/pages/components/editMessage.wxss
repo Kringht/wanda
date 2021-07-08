@@ -1,9 +1,9 @@
 
-.context {
+.context.data-v-a9a59246 {
   height: 100%;
   width: 100%;
 }
-.formView {
+.formView.data-v-a9a59246 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -12,10 +12,18 @@
   -webkit-flex-direction: row;
           flex-direction: row;
 }
-u-form {
+.uinput.data-v-a9a59246{
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  padding: 7px;
+}
+text.data-v-a9a59246 {
+  color: #909399
+}
+u-form.data-v-a9a59246 {
   width: 100%;
 }
-.footButton {
+.footButton.data-v-a9a59246 {
   position: absolute;
   width: 70%;
   text-align: center;

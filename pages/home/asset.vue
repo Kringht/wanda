@@ -4,7 +4,7 @@
     <view class="tableTitle" v-show="table_show">
       <u-table>
         <u-tr>
-          <u-th>类型</u-th>
+          <u-th>分类</u-th>
           <u-th>简称</u-th>
           <u-th>日期</u-th>
           <u-th>位置</u-th>
@@ -17,15 +17,35 @@
       <view class="table">
         <u-table>
           <u-tr v-for="(asset,index) in asset_data" v-model="asset_data">
-            <u-td>{{asset.asset_type}}</u-td>
-            <u-td>{{asset.asset_class}}</u-td>
-            <u-td>{{asset.asset_acceptance_date}}</u-td>
-            <u-td>{{asset.now_addres}}</u-td>
-            <u-td>{{asset.goods_state}}</u-td>
+            <u-td>
+              <view @click="search_id(asset._id)" class="utd">
+                {{asset_type_lists[asset.asset_type[1]-1]}}
+              </view>
+            </u-td>
+            <u-td>
+              <view @click="search_id(asset._id)" class="utd">
+                {{asset.asset_class}}
+              </view>
+            </u-td>
+            <u-td>
+              <view @click="search_id(asset._id)" class="utd">
+                {{asset.asset_acceptance_date}}
+              </view>
+            </u-td>
+            <u-td>
+              <view @click="search_id(asset._id)" class="utd">
+                {{asset.now_addres}}
+              </view>
+            </u-td>
+            <u-td>
+              <view @click="search_id(asset._id)" class="utd">
+                {{asset.goods_state}}
+              </view>
+            </u-td>
             <u-td>
               <view>
-                <u-icon class="search" name="search" size="38" @click="search_id(asset._id)" />
-                <u-icon class="edit" name="edit-pen" size="38" @click="edit(asset._id)" />
+                <!-- <u-icon class="search" name="search" size="38" @click="search_id(asset._id)" /> -->
+                <u-icon class="edit" name="edit-pen" size="48" @click="edit(asset)" />
               </view>
             </u-td>
           </u-tr>
@@ -50,7 +70,7 @@
         <u-popup v-model="asset_id_data_show" mode="center" width="80%">
           <text>资产编号：</text>
           <text>{{asset_id_data[0].asset_number}}</text><br />
-          <text>简称：</text>
+          <text>分类：</text>
           <text>{{asset_id_data[0].asset_class}}</text><br />
           <text>名称：</text>
           <text>{{asset_id_data[0].asset_title}}</text><br />
@@ -82,18 +102,30 @@
   export default {
     data() {
       return {
+        option: -1,
         WidthHeight: {},
         table_show: false,
         select_show: false,
         select_list: require('../js/select.js'),
         select_asset_class: '',
         asset_data: {},
+        asset_type_lists: ['低值易耗', '个人笔记本', 'IT类', '家具类'],
         asset_id_data: null,
         asset_id_data_show: false
       }
     },
-    onLoad() {
+    onLoad(option) {
       let that = this
+      // 获取 修改页面返回状态
+      // 0:无修改数据
+      // 1:有修改数据
+      // data 返回修改后的数据
+      if (JSON.stringify(option) != "{}") {
+        let res = JSON.parse(option.res)
+        console.log(res)
+        that.select_asset_class = res.result.data.asset_class
+        this.getAsset(res.result.data.asset_class)
+      }
       uni.getSystemInfo({
         success: res => {
           this.WidthHeight = {
@@ -115,17 +147,18 @@
           // 如果搜索框有文本,则查找搜索
           // 显示等待提示框
           this.loading()
+          this.select_asset_class = select_asset_class
           this.select(select_asset_class)
         }
       },
       // 编辑
-      edit(id) {
+      edit(asset) {
         uni.navigateTo({
-          url: '../components/editMessage?id=' + id,
+          url: '../components/editMessage?asset_data=' + JSON.stringify(asset),
           animationType: 'slide-in-top',
           animationDuration: 300,
           success: res => {
-            console.log('页面跳转成功')
+            console.log('跳转至编辑页面')
           },
           fail: err => {
             console.log('页面跳转失败：', err)
@@ -167,7 +200,6 @@
             // 显示table 页面
             this.table_show = true
             this.asset_data = res.result.data
-            // console.log('云函数调用成功，返回：', this.asset_data)
           },
           fail: err => {
             // 显示查询失败提示，控制台打印报错
@@ -178,7 +210,6 @@
       },
       // 选择页面
       confirm(e) {
-        // console.log(this.select_list)
         let list = []
         for (let i of e) {
           // 获取选择的目录
@@ -189,6 +220,7 @@
         // 显示等待提示框
         this.loading()
         // 调用查询方法
+        this.select_asset_class = list[1]
         this.select(list)
       },
       // 显示等待提示框
@@ -217,7 +249,23 @@
       }
 
     },
-    watch: {}
+    watch: {
+      option(val, old) {
+        console.log(this.option)
+        // 如果数据有更新,重新调用查询方法 更新缓存数据
+        if (val == 1) {
+          // 调用点击时间,重新加载数据
+          this.getAsset()
+        }
+        if (val == 0) {
+          uni.showToast({
+            icon: 'none',
+            title: '未修改任何数据',
+            duration: 800
+          })
+        }
+      }
+    }
   }
 </script>
 
@@ -233,6 +281,11 @@
     position: absolute;
     bottom: 4px;
     width: 100%;
+  }
+
+  .utd {
+    padding: 7px;
+    margin: 0px;
   }
 
   u-td {

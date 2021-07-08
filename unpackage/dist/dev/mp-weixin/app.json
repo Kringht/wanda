@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/components/editMessage",
+    "pages/home/login",
+    "pages/home/stationery",
     "pages/home/asset",
-    "pages/home/stationery"
+    "pages/components/editMessage"
   ],
   "subPackages": [],
   "window": {
@@ -31,6 +32,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

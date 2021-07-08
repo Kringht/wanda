@@ -1,0 +1,1 @@
+<view class="context data-v-3b89baf2"><view class="data-v-3b89baf2"><button type="default" success="{{true}}" data-event-opts="{{[['tap',[['test',['$event']]]]]}}" bindtap="__e" class="data-v-3b89baf2">按 钮</button></view></view>

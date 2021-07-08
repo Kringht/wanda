@@ -2,7 +2,7 @@
 exports.main = async (event, context) => {
   //event为客户端上传的参数
   // {"asset_id":"60be0630ce4325fead08a992"}
-  console.log('event : ', event)
+  // console.log('event : ', event)
   // 实例化db，建立连接
   const db = uniCloud.database()
   // 实例化 需要查询的表格
